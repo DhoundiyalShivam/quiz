@@ -52,6 +52,16 @@
     color: #D1E8E4;
     border: 1px solid #BCCC9A;
     margin:0 0.5rem;
+    cursor: pointer;
+}
+.selectedValues{
+    padding: 5px 10px;
+    background-color: blue;
+    border-radius: 1rem;
+    color: #D1E8E4;
+    border: 1px solid #BCCC9A;
+    margin:0 0.5rem;
+    cursor: pointer;
 }
 .optionValues:active{
     padding: 5px 10px;

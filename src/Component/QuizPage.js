@@ -1,24 +1,14 @@
 import React from 'react'
 import './Quiz.css'
 function QuizPage(props){
-    // const [newquizData,setNewQuizData] = React.useState([])
     const{quizData}=props;
-    let quizObj =[]
-    quizObj = quizData.map(d=>{
-return{
-    question: d.question,
-    options: [d.correct_answer, ...d.incorrect_answers]   
-}
-    })
-    console.log(quizData)
-    console.log(quizObj)
     return(
         <div className='quizPage'>
-            {quizObj.map(data=>(
+            {quizData.map(data=>(
                 <div className='questions'>
                     <h3>{data.question}</h3>
                     <div className='options'>
-                    {data.options.sort().map(d=>(<div className='optionValues'>{d}</div>))}
+                    {data.options.sort().map(d=>(<div className='optionValues' onClick={()=>props.answerFunc(d)}>{d}</div>))}
                     </div>
                 </div>
             ))}
